@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct TabBarContentView: View {
+    
+    @State private var habitsCount = 1
     var body: some View {
         TabView {
-            HabitsView()
-                .tabItem {
-                    Image(systemName: "chart.bar.doc.horizontal.fill")
-                    Text("Habits")
-                }
+            if habitsCount == 0 {
+                NoHabitsView()
+                    .tabItem {
+                        Image(systemName: "chart.bar.doc.horizontal.fill")
+                        Text("Habits")
+                    }
+            } else {
+                HabitsView()
+                    .tabItem {
+                        Image(systemName: "chart.bar.doc.horizontal.fill")
+                        Text("Habits")
+                    }
+            }
             StatisticsView()
                 .tabItem {
                     Image(systemName: "chart.pie.fill")
