@@ -9,13 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            
-            TabBarContentView()
-                
-                .navigationTitle(Text("Today"))
-        }
-        
+        TabBarContentView()
+    
     }
 }
 
