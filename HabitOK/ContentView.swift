@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack{
-            Text("Hello, world!")
-            Text("Hello!")
+        NavigationView {
+            
+            TabBarContentView()
+                
+                .navigationTitle(Text("Today"))
         }
         
-            .padding()
     }
 }
 

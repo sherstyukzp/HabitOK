@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0541050B26122708004D084F /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541050A26122708004D084F /* HabitsView.swift */; };
+		054105102612277F004D084F /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541050F2612277F004D084F /* StatisticsView.swift */; };
+		05410515261227BB004D084F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05410514261227BB004D084F /* SettingsView.swift */; };
+		0541051E2612284A004D084F /* TabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541051D2612284A004D084F /* TabBarContentView.swift */; };
 		0544F63C2609190400903DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F63B2609190400903DF8 /* AppDelegate.swift */; };
 		0544F63E2609190400903DF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F63D2609190400903DF8 /* SceneDelegate.swift */; };
 		0544F6402609190400903DF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F63F2609190400903DF8 /* ContentView.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0541050A26122708004D084F /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
+		0541050F2612277F004D084F /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		05410514261227BB004D084F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0541051D2612284A004D084F /* TabBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContentView.swift; sourceTree = "<group>"; };
 		0544F6382609190400903DF8 /* HabitOK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitOK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0544F63B2609190400903DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0544F63D2609190400903DF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05410519261227E9004D084F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0541050A26122708004D084F /* HabitsView.swift */,
+				0541050F2612277F004D084F /* StatisticsView.swift */,
+				05410514261227BB004D084F /* SettingsView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		0544F62F2609190400903DF8 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +122,8 @@
 				0544F63B2609190400903DF8 /* AppDelegate.swift */,
 				0544F63D2609190400903DF8 /* SceneDelegate.swift */,
 				0544F63F2609190400903DF8 /* ContentView.swift */,
+				0541051D2612284A004D084F /* TabBarContentView.swift */,
+				05410519261227E9004D084F /* View */,
 				0544F6442609190600903DF8 /* Assets.xcassets */,
 				0544F6492609190600903DF8 /* LaunchScreen.storyboard */,
 				0544F64C2609190600903DF8 /* Info.plist */,
@@ -269,9 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05410515261227BB004D084F /* SettingsView.swift in Sources */,
 				0544F63C2609190400903DF8 /* AppDelegate.swift in Sources */,
+				054105102612277F004D084F /* StatisticsView.swift in Sources */,
 				0544F63E2609190400903DF8 /* SceneDelegate.swift in Sources */,
+				0541051E2612284A004D084F /* TabBarContentView.swift in Sources */,
 				0544F6432609190400903DF8 /* HabitOK.xcdatamodeld in Sources */,
+				0541050B26122708004D084F /* HabitsView.swift in Sources */,
 				0544F6402609190400903DF8 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
