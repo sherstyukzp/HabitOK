@@ -12,10 +12,9 @@
 		05410515261227BB004D084F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05410514261227BB004D084F /* SettingsView.swift */; };
 		0541051E2612284A004D084F /* TabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541051D2612284A004D084F /* TabBarContentView.swift */; };
 		0541052326122F8F004D084F /* NoHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541052226122F8F004D084F /* NoHabitsView.swift */; };
-		0541052B261237EC004D084F /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541052A261237EC004D084F /* GridView.swift */; };
 		0541053526123806004D084F /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541053426123806004D084F /* DateModel.swift */; };
-		0541054126123822004D084F /* DateModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541054026123822004D084F /* DateModelController.swift */; };
 		0541054A26125105004D084F /* ItemFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541054926125105004D084F /* ItemFormatter.swift */; };
+		0541055C26132CFE004D084F /* DatePickerWithButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541055B26132CFE004D084F /* DatePickerWithButtons.swift */; };
 		0544F63C2609190400903DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F63B2609190400903DF8 /* AppDelegate.swift */; };
 		0544F63E2609190400903DF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F63D2609190400903DF8 /* SceneDelegate.swift */; };
 		0544F6402609190400903DF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F63F2609190400903DF8 /* ContentView.swift */; };
@@ -50,10 +49,9 @@
 		05410514261227BB004D084F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0541051D2612284A004D084F /* TabBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContentView.swift; sourceTree = "<group>"; };
 		0541052226122F8F004D084F /* NoHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoHabitsView.swift; sourceTree = "<group>"; };
-		0541052A261237EC004D084F /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		0541053426123806004D084F /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
-		0541054026123822004D084F /* DateModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateModelController.swift; sourceTree = "<group>"; };
 		0541054926125105004D084F /* ItemFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFormatter.swift; sourceTree = "<group>"; };
+		0541055B26132CFE004D084F /* DatePickerWithButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerWithButtons.swift; sourceTree = "<group>"; };
 		0544F6382609190400903DF8 /* HabitOK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitOK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0544F63B2609190400903DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0544F63D2609190400903DF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +97,7 @@
 		05410519261227E9004D084F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0541052A261237EC004D084F /* GridView.swift */,
+				0541055B26132CFE004D084F /* DatePickerWithButtons.swift */,
 				0541052226122F8F004D084F /* NoHabitsView.swift */,
 				0541050A26122708004D084F /* HabitsView.swift */,
 				0541050F2612277F004D084F /* StatisticsView.swift */,
@@ -119,7 +117,6 @@
 		054105452612382F004D084F /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0541054026123822004D084F /* DateModelController.swift */,
 				0541054926125105004D084F /* ItemFormatter.swift */,
 			);
 			path = "Model Controller";
@@ -328,10 +325,9 @@
 				0541051E2612284A004D084F /* TabBarContentView.swift in Sources */,
 				0544F6432609190400903DF8 /* HabitOK.xcdatamodeld in Sources */,
 				0541050B26122708004D084F /* HabitsView.swift in Sources */,
-				0541054126123822004D084F /* DateModelController.swift in Sources */,
+				0541055C26132CFE004D084F /* DatePickerWithButtons.swift in Sources */,
 				0541053526123806004D084F /* DateModel.swift in Sources */,
 				0544F6402609190400903DF8 /* ContentView.swift in Sources */,
-				0541052B261237EC004D084F /* GridView.swift in Sources */,
 				0541052326122F8F004D084F /* NoHabitsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
