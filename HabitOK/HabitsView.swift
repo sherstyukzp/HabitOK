@@ -11,6 +11,7 @@ struct HabitsView: View {
     
     @State private var selectedDate: Date = Date()
     @State private var showDatePicker: Bool = false
+    @State private var showingAddHabit = false
     
     var body: some View {
         
@@ -39,12 +40,15 @@ struct HabitsView: View {
                     Spacer()
                     HStack {
                         Button(action: {
-                            print("👉 button pressed Plus...")
-                        }) { Image(systemName: "plus.circle.fill")
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                            
+                            self.showingAddHabit.toggle()
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                        }.sheet(isPresented: $showingAddHabit) {
+                            NewHabitView()
                         }
+                        
                     }.padding(.horizontal)
                     
                 }
@@ -77,6 +81,7 @@ struct HabitsView: View {
                 Text("Hello World !")
             }
         }
+        
         
         
         

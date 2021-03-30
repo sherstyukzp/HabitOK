@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0531DA182613B44400D19D55 /* NewHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DA172613B44400D19D55 /* NewHabitView.swift */; };
+		0531DA1D2613B94A00D19D55 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DA1C2613B94A00D19D55 /* ClearButton.swift */; };
 		0541050B26122708004D084F /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541050A26122708004D084F /* HabitsView.swift */; };
 		054105102612277F004D084F /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541050F2612277F004D084F /* StatisticsView.swift */; };
 		05410515261227BB004D084F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05410514261227BB004D084F /* SettingsView.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0531DA172613B44400D19D55 /* NewHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitView.swift; sourceTree = "<group>"; };
+		0531DA1C2613B94A00D19D55 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		0541050A26122708004D084F /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
 		0541050F2612277F004D084F /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		05410514261227BB004D084F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0541052226122F8F004D084F /* NoHabitsView.swift */,
+				0531DA172613B44400D19D55 /* NewHabitView.swift */,
 				0541050A26122708004D084F /* HabitsView.swift */,
 				0541050F2612277F004D084F /* StatisticsView.swift */,
 				05410514261227BB004D084F /* SettingsView.swift */,
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				0541054926125105004D084F /* ItemFormatter.swift */,
+				0531DA1C2613B94A00D19D55 /* ClearButton.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -320,8 +326,10 @@
 				0541054A26125105004D084F /* ItemFormatter.swift in Sources */,
 				0544F63E2609190400903DF8 /* SceneDelegate.swift in Sources */,
 				0541051E2612284A004D084F /* TabBarContentView.swift in Sources */,
+				0531DA182613B44400D19D55 /* NewHabitView.swift in Sources */,
 				0544F6432609190400903DF8 /* HabitOK.xcdatamodeld in Sources */,
 				0541050B26122708004D084F /* HabitsView.swift in Sources */,
+				0531DA1D2613B94A00D19D55 /* ClearButton.swift in Sources */,
 				0541053526123806004D084F /* DateModel.swift in Sources */,
 				0544F6402609190400903DF8 /* ContentView.swift in Sources */,
 				0541052326122F8F004D084F /* NoHabitsView.swift in Sources */,
