@@ -8,12 +8,25 @@
 import SwiftUI
 
 struct StatisticsView: View {
+    
+    
+    @State var selectedDate: Date = Date()
+    @State var showDatePicker: Bool = false
+    
     var body: some View {
+        
         NavigationView {
             Text("Statistics")
                 .navigationTitle(Text("Statistics"))
             
         }
+        
+        
+        
+        
+        
+        
+        
     }
 }
 

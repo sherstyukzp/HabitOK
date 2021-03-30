@@ -9,63 +9,73 @@ import SwiftUI
 
 struct HabitsView: View {
     
-    //@State private var selectedDate: Date = Date()
-    
-    @State var showDatePicker: Bool = false
-    @State var savedDate: Date? = Date()
+    @State private var selectedDate: Date = Date()
+    @State private var showDatePicker: Bool = false
     
     var body: some View {
         
-        NavigationView {
-            
-            
-            
+        VStack {
+            // NavigationBar
             VStack {
-                ZStack {
+                HStack {
+                    HStack {
+                        Button(action: {
+                            print("👉 button pressed Calendar...")
+                            self.showDatePicker.toggle()
+                            
+                        }) { Image(systemName: "calendar")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                        }
+                        
+                        Text("\(selectedDate, formatter: ItemFormatter.init().itemFormatterDayOfTheWeekDayOfTheMonthAndMonth)")
+                            .font(.body)
+                            .foregroundColor(Color(.systemGray))
+                            .onTapGesture {
+                                showDatePicker.toggle()
+                            }
+                        
+                    }.padding(.horizontal)
+                    Spacer()
+                    HStack {
+                        Button(action: {
+                            print("👉 button pressed Plus...")
+                        }) { Image(systemName: "plus.circle.fill")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            
+                        }
+                    }.padding(.horizontal)
                     
-                    List(0..<15) { item in
-                        Text("Hello World !")
-                    }
-                    
-                    if showDatePicker {
-                        DatePickerWithButtons(showDatePicker: $showDatePicker, savedDate: $savedDate, selectedDate: savedDate ?? Date())
+                }
+                HStack {
+                    Text("Statistics")
+                        .font(.largeTitle)
+                        .bold()
+                        .padding(.horizontal)
+                    Spacer()
+                }
+                Divider()
+                
+                if showDatePicker {
+                    // DatePicker
+                    VStack {
+                        DatePicker("", selection: $selectedDate, displayedComponents: [.date])
+                            .datePickerStyle(GraphicalDatePickerStyle())
+                            .onChange(of: selectedDate, perform: { value in
+                                showDatePicker = false
+                            })
+                        
+                        Divider()
                         
                     }
                 }
-                
             }
             
-            .navigationBarTitle("Habits", displayMode: .large)
-            .navigationBarItems(leading:
-                                    HStack {
-                                        Button(action: {
-                                            print("👉 button pressed Calendar...")
-                                            self.showDatePicker.toggle()
-                                            
-                                        }) { Image(systemName: "calendar")
-                                            .resizable()
-                                            .frame(width: 20, height: 20)
-                                        }
-                                        Spacer()
-                                        Text("\(savedDate!, formatter: ItemFormatter.init().itemFormatterDayOfTheWeekDayOfTheMonthAndMonth)")
-                                            .font(.body)
-                                            .foregroundColor(Color(.systemGray))
-                                            .onTapGesture {
-                                                showDatePicker.toggle()
-                                            }
-                                    }, trailing:
-                                        HStack {
-                                            Button(action: {
-                                                print("👉 button pressed Plus...")
-                                            }) { Image(systemName: "plus.circle.fill")
-                                                .resizable()
-                                                .frame(width: 40, height: 40)
-                                                
-                                            }
-                                        }
-                                
-            )
             
+            List(0..<15) { item in
+                Text("Hello World !")
+            }
         }
         
         
