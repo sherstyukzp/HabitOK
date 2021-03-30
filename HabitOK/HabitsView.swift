@@ -16,7 +16,7 @@ struct HabitsView: View {
         
         VStack {
             // NavigationBar
-            VStack {
+            VStack (spacing: 5) {
                 HStack {
                     HStack {
                         Button(action: {
@@ -48,10 +48,11 @@ struct HabitsView: View {
                     }.padding(.horizontal)
                     
                 }
-                HStack {
-                    Text("Statistics")
+                HStack{
+                    Text("Habits")
                         .font(.largeTitle)
-                        .bold()
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.leading)
                         .padding(.horizontal)
                     Spacer()
                 }
@@ -71,7 +72,6 @@ struct HabitsView: View {
                     }
                 }
             }
-            
             
             List(0..<15) { item in
                 Text("Hello World !")

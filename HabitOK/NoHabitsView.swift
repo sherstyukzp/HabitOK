@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NoHabitsView: View {
+    @State private var selectedDate: Date = Date()
     var body: some View {
         NavigationView {
             VStack {
@@ -27,6 +28,33 @@ struct NoHabitsView: View {
             }
             
             .navigationTitle(Text("Habits"))
+            .navigationBarItems(leading:
+                                    HStack {
+                                        Button(action: {
+                                            print("👉 button pressed Calendar...")
+                                            
+                                        }) { Image(systemName: "calendar")
+                                            .resizable()
+                                            .frame(width: 20, height: 20)
+                                        }
+                                        Spacer()
+                                        Text("\(selectedDate, formatter: ItemFormatter.init().itemFormatterDayOfTheWeekDayOfTheMonthAndMonth)")
+                                            .font(.body)
+                                            .foregroundColor(Color(.systemGray))
+                                        
+                                    }, trailing:
+                                        HStack {
+                                            Button(action: {
+                                                print("👉 button pressed Plus...")
+                                            }) { Image(systemName: "plus.circle.fill")
+                                                .resizable()
+                                                .frame(width: 40, height: 40)
+                                                
+                                            }
+                                        }
+                                
+            )
+            
             
         }
     }
