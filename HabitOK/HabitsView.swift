@@ -46,7 +46,7 @@ struct HabitsView: View {
                                 .resizable()
                                 .frame(width: 40, height: 40)
                         }.sheet(isPresented: $showingAddHabit) {
-                            NewHabitView()
+                            AddNewHabitView()
                         }
                         
                     }.padding(.horizontal)

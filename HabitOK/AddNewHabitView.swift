@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewHabitView: View {
+struct AddNewHabitView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -52,6 +52,6 @@ struct NewHabitView: View {
 
 struct NewHabitView_Previews: PreviewProvider {
     static var previews: some View {
-        NewHabitView()
+        AddNewHabitView()
     }
 }

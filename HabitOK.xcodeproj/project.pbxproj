@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0531DA182613B44400D19D55 /* NewHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DA172613B44400D19D55 /* NewHabitView.swift */; };
+		0531DA182613B44400D19D55 /* AddNewHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DA172613B44400D19D55 /* AddNewHabitView.swift */; };
 		0531DA1D2613B94A00D19D55 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DA1C2613B94A00D19D55 /* ClearButton.swift */; };
 		0541050B26122708004D084F /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541050A26122708004D084F /* HabitsView.swift */; };
 		054105102612277F004D084F /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541050F2612277F004D084F /* StatisticsView.swift */; };
@@ -27,6 +27,7 @@
 		0544F6612609190600903DF8 /* HabitOKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F6602609190600903DF8 /* HabitOKUITests.swift */; };
 		058B17D226177F6A002E2D97 /* ListAreasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17D126177F6A002E2D97 /* ListAreasView.swift */; };
 		058B17D72617805E002E2D97 /* AddNewAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17D62617805E002E2D97 /* AddNewAreaView.swift */; };
+		058B17DC261781EF002E2D97 /* ListHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17DB261781EF002E2D97 /* ListHabitsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0531DA172613B44400D19D55 /* NewHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitView.swift; sourceTree = "<group>"; };
+		0531DA172613B44400D19D55 /* AddNewHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewHabitView.swift; sourceTree = "<group>"; };
 		0531DA1C2613B94A00D19D55 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		0541050A26122708004D084F /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
 		0541050F2612277F004D084F /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		0544F6622609190600903DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		058B17D126177F6A002E2D97 /* ListAreasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAreasView.swift; sourceTree = "<group>"; };
 		058B17D62617805E002E2D97 /* AddNewAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAreaView.swift; sourceTree = "<group>"; };
+		058B17DB261781EF002E2D97 /* ListHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHabitsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				0541052226122F8F004D084F /* NoHabitsView.swift */,
-				0531DA172613B44400D19D55 /* NewHabitView.swift */,
+				0531DA172613B44400D19D55 /* AddNewHabitView.swift */,
 				0541050A26122708004D084F /* HabitsView.swift */,
 				0541050F2612277F004D084F /* StatisticsView.swift */,
 				05410514261227BB004D084F /* SettingsView.swift */,
+				058B17DB261781EF002E2D97 /* ListHabitsView.swift */,
 				058B17D126177F6A002E2D97 /* ListAreasView.swift */,
 				058B17D62617805E002E2D97 /* AddNewAreaView.swift */,
 			);
@@ -327,12 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				05410515261227BB004D084F /* SettingsView.swift in Sources */,
+				058B17DC261781EF002E2D97 /* ListHabitsView.swift in Sources */,
 				0544F63C2609190400903DF8 /* AppDelegate.swift in Sources */,
 				054105102612277F004D084F /* StatisticsView.swift in Sources */,
 				0541054A26125105004D084F /* ItemFormatter.swift in Sources */,
 				0544F63E2609190400903DF8 /* SceneDelegate.swift in Sources */,
 				0541051E2612284A004D084F /* TabBarContentView.swift in Sources */,
-				0531DA182613B44400D19D55 /* NewHabitView.swift in Sources */,
+				0531DA182613B44400D19D55 /* AddNewHabitView.swift in Sources */,
 				0544F6432609190400903DF8 /* HabitOK.xcdatamodeld in Sources */,
 				058B17D72617805E002E2D97 /* AddNewAreaView.swift in Sources */,
 				0541050B26122708004D084F /* HabitsView.swift in Sources */,

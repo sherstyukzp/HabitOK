@@ -12,6 +12,7 @@ struct ListAreasView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State private var showingAddArea = false
+    
     var body: some View {
         VStack {
             Text("Area management")

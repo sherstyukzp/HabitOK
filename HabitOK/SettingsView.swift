@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
     var body: some View {
         NavigationView {
             Form {
-                Section {
+                Section(header: Text("Management")){
+                    
                     NavigationLink(destination: ListAreasView()) {
-                        Text("Area management")
+                        Text("Areas management")
+                    }
+                    
+                    NavigationLink(destination: ListHabitsView()) {
+                        Text("Habits management")
                     }
                 }
             }
             
-                .navigationTitle(Text("Settings"))
+            .navigationTitle(Text("Settings"))
             
         }
     }
