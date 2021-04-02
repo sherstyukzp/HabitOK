@@ -10,7 +10,14 @@ import SwiftUI
 struct SettingsView: View {
     var body: some View {
         NavigationView {
-            Text("Settings")
+            Form {
+                Section {
+                    NavigationLink(destination: ListAreasView()) {
+                        Text("Area management")
+                    }
+                }
+            }
+            
                 .navigationTitle(Text("Settings"))
             
         }

@@ -25,6 +25,8 @@
 		0544F64B2609190600903DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0544F6492609190600903DF8 /* LaunchScreen.storyboard */; };
 		0544F6562609190600903DF8 /* HabitOKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F6552609190600903DF8 /* HabitOKTests.swift */; };
 		0544F6612609190600903DF8 /* HabitOKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F6602609190600903DF8 /* HabitOKUITests.swift */; };
+		058B17D226177F6A002E2D97 /* ListAreasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17D126177F6A002E2D97 /* ListAreasView.swift */; };
+		058B17D72617805E002E2D97 /* AddNewAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17D62617805E002E2D97 /* AddNewAreaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		0544F65C2609190600903DF8 /* HabitOKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitOKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0544F6602609190600903DF8 /* HabitOKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitOKUITests.swift; sourceTree = "<group>"; };
 		0544F6622609190600903DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		058B17D126177F6A002E2D97 /* ListAreasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAreasView.swift; sourceTree = "<group>"; };
+		058B17D62617805E002E2D97 /* AddNewAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAreaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				0541050A26122708004D084F /* HabitsView.swift */,
 				0541050F2612277F004D084F /* StatisticsView.swift */,
 				05410514261227BB004D084F /* SettingsView.swift */,
+				058B17D126177F6A002E2D97 /* ListAreasView.swift */,
+				058B17D62617805E002E2D97 /* AddNewAreaView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -328,11 +334,13 @@
 				0541051E2612284A004D084F /* TabBarContentView.swift in Sources */,
 				0531DA182613B44400D19D55 /* NewHabitView.swift in Sources */,
 				0544F6432609190400903DF8 /* HabitOK.xcdatamodeld in Sources */,
+				058B17D72617805E002E2D97 /* AddNewAreaView.swift in Sources */,
 				0541050B26122708004D084F /* HabitsView.swift in Sources */,
 				0531DA1D2613B94A00D19D55 /* ClearButton.swift in Sources */,
 				0541053526123806004D084F /* DateModel.swift in Sources */,
 				0544F6402609190400903DF8 /* ContentView.swift in Sources */,
 				0541052326122F8F004D084F /* NoHabitsView.swift in Sources */,
+				058B17D226177F6A002E2D97 /* ListAreasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
