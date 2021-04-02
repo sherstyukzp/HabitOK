@@ -31,19 +31,16 @@ struct AddNewHabitView: View {
                                             self.presentationMode.projectedValue.wrappedValue.dismiss()
                                         }) {
                                             Text("Cancel")
-                                            
                                         }
                                     }
-                                    , trailing:
-                                        HStack {
-                                            Button(action: {
-                                                print("👉 button pressed Save...")
-                                                
-                                            }) { Text("Save")
-                                            }
+                                , trailing:
+                                    HStack {
+                                        Button(action: {
+                                            print("👉 button pressed Save...")
                                             
+                                        }) { Text("Save")
                                         }
-                                
+                                    }
             )
         }
         

@@ -10,18 +10,36 @@ import SwiftUI
 struct AddNewAreaView: View {
     @Environment(\.presentationMode) var presentationMode
     
+    @State var nameArea: String = ""
+    
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Add New Area")
+            Form {
+                Section(header: Text("Name Area")) {
+                    TextField("Typing name area", text: $nameArea)
+                        .keyboardType(.default)
+                        .modifier(ClearButton(text: $nameArea))
+                }
             }
             
-            .navigationBarTitle("New Area", displayMode: .large)
+            .navigationTitle(Text("New Area"))
             .navigationBarItems(leading:
-                                    Button("Cancel") {
-                                        self.presentationMode.projectedValue.wrappedValue.dismiss()
+                                    HStack {
+                                        Button(action: {
+                                            print("👉 button pressed Cancel...")
+                                            self.presentationMode.projectedValue.wrappedValue.dismiss()
+                                        }) {
+                                            Text("Cancel")
+                                        }
                                     }
-                                
+                                , trailing:
+                                    HStack {
+                                        Button(action: {
+                                            print("👉 button pressed Save...")
+                                            
+                                        }) { Text("Save")
+                                        }
+                                    }
             )
         }
     }
