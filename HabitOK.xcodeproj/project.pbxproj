@@ -25,6 +25,7 @@
 		0544F64B2609190600903DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0544F6492609190600903DF8 /* LaunchScreen.storyboard */; };
 		0544F6562609190600903DF8 /* HabitOKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F6552609190600903DF8 /* HabitOKTests.swift */; };
 		0544F6612609190600903DF8 /* HabitOKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0544F6602609190600903DF8 /* HabitOKUITests.swift */; };
+		054BD3C1261A14E0002FD0BD /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054BD3C0261A14E0002FD0BD /* EmailHelper.swift */; };
 		058B17D226177F6A002E2D97 /* ListAreasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17D126177F6A002E2D97 /* ListAreasView.swift */; };
 		058B17D72617805E002E2D97 /* AddNewAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17D62617805E002E2D97 /* AddNewAreaView.swift */; };
 		058B17DC261781EF002E2D97 /* ListHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17DB261781EF002E2D97 /* ListHabitsView.swift */; };
@@ -72,6 +73,7 @@
 		0544F65C2609190600903DF8 /* HabitOKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitOKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0544F6602609190600903DF8 /* HabitOKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitOKUITests.swift; sourceTree = "<group>"; };
 		0544F6622609190600903DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		054BD3C0261A14E0002FD0BD /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
 		058B17D126177F6A002E2D97 /* ListAreasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAreasView.swift; sourceTree = "<group>"; };
 		058B17D62617805E002E2D97 /* AddNewAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAreaView.swift; sourceTree = "<group>"; };
 		058B17DB261781EF002E2D97 /* ListHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHabitsView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				0541054926125105004D084F /* ItemFormatter.swift */,
 				0531DA1C2613B94A00D19D55 /* ClearButton.swift */,
+				054BD3C0261A14E0002FD0BD /* EmailHelper.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				054BD3C1261A14E0002FD0BD /* EmailHelper.swift in Sources */,
 				05410515261227BB004D084F /* SettingsView.swift in Sources */,
 				058B17DC261781EF002E2D97 /* ListHabitsView.swift in Sources */,
 				0544F63C2609190400903DF8 /* AppDelegate.swift in Sources */,
