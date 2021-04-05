@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AddNewAreaView: View {
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Areas.entity(), sortDescriptors: []) var areas: FetchedResults<Areas>
     
     @State var nameArea: String = ""
     
@@ -36,6 +38,14 @@ struct AddNewAreaView: View {
                                     HStack {
                                         Button(action: {
                                             print("👉 button pressed Save...")
+                                            //---
+                                            let newArea = Areas(context: self.moc)
+                                            newArea.nameArea = self.nameArea
+                                            self.nameArea = ""
+                                            try? self.moc.save()
+                                            
+                                            //---
+                                            self.presentationMode.projectedValue.wrappedValue.dismiss()
                                             
                                         }) { Text("Save")
                                         }

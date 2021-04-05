@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051CF0B1261B6A920019292E /* Areas+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CF0AD261B6A920019292E /* Areas+CoreDataClass.swift */; };
+		051CF0B2261B6A920019292E /* Areas+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CF0AE261B6A920019292E /* Areas+CoreDataProperties.swift */; };
+		051CF0B3261B6A920019292E /* Habits+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CF0AF261B6A920019292E /* Habits+CoreDataClass.swift */; };
+		051CF0B4261B6A920019292E /* Habits+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CF0B0261B6A920019292E /* Habits+CoreDataProperties.swift */; };
+		051CF0B9261B6D290019292E /* AreaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CF0B8261B6D290019292E /* AreaDetailView.swift */; };
+		051CF0BE261B6D8D0019292E /* AreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CF0BD261B6D8D0019292E /* AreaView.swift */; };
 		0531DA182613B44400D19D55 /* AddNewHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DA172613B44400D19D55 /* AddNewHabitView.swift */; };
 		0531DA1D2613B94A00D19D55 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DA1C2613B94A00D19D55 /* ClearButton.swift */; };
 		0541050B26122708004D084F /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541050A26122708004D084F /* HabitsView.swift */; };
@@ -49,6 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		051CF0AD261B6A920019292E /* Areas+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Areas+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		051CF0AE261B6A920019292E /* Areas+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Areas+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		051CF0AF261B6A920019292E /* Habits+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habits+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		051CF0B0261B6A920019292E /* Habits+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habits+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		051CF0B8261B6D290019292E /* AreaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDetailView.swift; sourceTree = "<group>"; };
+		051CF0BD261B6D8D0019292E /* AreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaView.swift; sourceTree = "<group>"; };
 		0531DA172613B44400D19D55 /* AddNewHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewHabitView.swift; sourceTree = "<group>"; };
 		0531DA1C2613B94A00D19D55 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		0541050A26122708004D084F /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
@@ -114,6 +126,8 @@
 				05410514261227BB004D084F /* SettingsView.swift */,
 				058B17DB261781EF002E2D97 /* ListHabitsView.swift */,
 				058B17D126177F6A002E2D97 /* ListAreasView.swift */,
+				051CF0BD261B6D8D0019292E /* AreaView.swift */,
+				051CF0B8261B6D290019292E /* AreaDetailView.swift */,
 				058B17D62617805E002E2D97 /* AddNewAreaView.swift */,
 			);
 			name = View;
@@ -160,6 +174,10 @@
 		0544F63A2609190400903DF8 /* HabitOK */ = {
 			isa = PBXGroup;
 			children = (
+				051CF0AD261B6A920019292E /* Areas+CoreDataClass.swift */,
+				051CF0AE261B6A920019292E /* Areas+CoreDataProperties.swift */,
+				051CF0AF261B6A920019292E /* Habits+CoreDataClass.swift */,
+				051CF0B0261B6A920019292E /* Habits+CoreDataProperties.swift */,
 				0544F63B2609190400903DF8 /* AppDelegate.swift */,
 				0544F63D2609190400903DF8 /* SceneDelegate.swift */,
 				0544F63F2609190400903DF8 /* ContentView.swift */,
@@ -332,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				051CF0B3261B6A920019292E /* Habits+CoreDataClass.swift in Sources */,
 				054BD3C1261A14E0002FD0BD /* EmailHelper.swift in Sources */,
 				05410515261227BB004D084F /* SettingsView.swift in Sources */,
 				058B17DC261781EF002E2D97 /* ListHabitsView.swift in Sources */,
@@ -339,14 +358,19 @@
 				054105102612277F004D084F /* StatisticsView.swift in Sources */,
 				0541054A26125105004D084F /* ItemFormatter.swift in Sources */,
 				0544F63E2609190400903DF8 /* SceneDelegate.swift in Sources */,
+				051CF0B9261B6D290019292E /* AreaDetailView.swift in Sources */,
 				0541051E2612284A004D084F /* TabBarContentView.swift in Sources */,
+				051CF0B1261B6A920019292E /* Areas+CoreDataClass.swift in Sources */,
 				0531DA182613B44400D19D55 /* AddNewHabitView.swift in Sources */,
+				051CF0B4261B6A920019292E /* Habits+CoreDataProperties.swift in Sources */,
 				0544F6432609190400903DF8 /* HabitOK.xcdatamodeld in Sources */,
 				058B17D72617805E002E2D97 /* AddNewAreaView.swift in Sources */,
+				051CF0B2261B6A920019292E /* Areas+CoreDataProperties.swift in Sources */,
 				0541050B26122708004D084F /* HabitsView.swift in Sources */,
 				0531DA1D2613B94A00D19D55 /* ClearButton.swift in Sources */,
 				0541053526123806004D084F /* DateModel.swift in Sources */,
 				0544F6402609190400903DF8 /* ContentView.swift in Sources */,
+				051CF0BE261B6D8D0019292E /* AreaView.swift in Sources */,
 				0541052326122F8F004D084F /* NoHabitsView.swift in Sources */,
 				058B17D226177F6A002E2D97 /* ListAreasView.swift in Sources */,
 			);

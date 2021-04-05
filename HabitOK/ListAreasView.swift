@@ -10,12 +10,19 @@ import SwiftUI
 struct ListAreasView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var moc
+    
+    @FetchRequest(entity: Areas.entity(), sortDescriptors: []) var areas: FetchedResults<Areas>
     
     @State private var showingAddArea = false
     
     var body: some View {
-        VStack {
-            Text("Area management")
+        List {
+            ForEach(self.areas, id:\.self) { (area:Areas) in
+                NavigationLink(destination: AreaDetailView(area: area).environment(\.managedObjectContext, self.moc)) {
+                    AreaView(area: area).environment(\.managedObjectContext, self.moc)
+                }
+            }
         }
         
         
