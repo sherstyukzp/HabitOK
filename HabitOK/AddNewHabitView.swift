@@ -10,17 +10,21 @@ import SwiftUI
 struct AddNewHabitView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var moc
+    @ObservedObject var area: Areas
     
-    @State var nameHabit: String = ""
+    @State var newNameHabit: String = ""
     
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Name Habit")) {
-                    TextField("Typing name habit", text: $nameHabit)
+                    TextField("Typing name habit", text: $newNameHabit)
                         .keyboardType(.default)
-                        .modifier(ClearButton(text: $nameHabit))
+                        .modifier(ClearButton(text: $newNameHabit))
                 }
+                
+                Text ("For: \(area.wrappedName)")
             }
             
             .navigationTitle(Text("New Habit"))
@@ -37,6 +41,14 @@ struct AddNewHabitView: View {
                                     HStack {
                                         Button(action: {
                                             print("👉 button pressed Save...")
+                                            //
+                                            let newHabit = Habits(context: self.moc)
+                                            newHabit.nameHabit = self.newNameHabit
+                                            self.newNameHabit = ""
+                                            self.area.addToHabits(newHabit)
+                                            try? self.moc.save()
+                                            //
+                                            self.presentationMode.projectedValue.wrappedValue.dismiss()
                                             
                                         }) { Text("Save")
                                         }
@@ -47,8 +59,8 @@ struct AddNewHabitView: View {
     }
 }
 
-struct NewHabitView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddNewHabitView()
-    }
-}
+//struct NewHabitView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddNewHabitView()
+//    }
+//}

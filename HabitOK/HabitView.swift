@@ -1,5 +1,5 @@
 //
-//  AreaView.swift
+//  HabitView.swift
 //  HabitOK
 //
 //  Created by Ярослав Шерстюк on 05.04.2021.
@@ -7,20 +7,18 @@
 
 import SwiftUI
 
-struct AreaView: View {
+struct HabitView: View {
     
     @Environment(\.managedObjectContext) var moc
-    @ObservedObject var area: Areas
+    @ObservedObject var habits: Habits
     
     var body: some View {
-        VStack {
-            Text("\(self.area.wrappedName)")
-        }
+        Text("\(self.habits.wrappedName)")
     }
 }
 
-//struct AreaView_Previews: PreviewProvider {
+//struct HabitView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        AreaView()
+//        HabitView()
 //    }
 //}

@@ -26,7 +26,7 @@ struct ListHabitsView: View {
                                 }
         )
         .sheet(isPresented: $showingAddHabit) {
-            AddNewHabitView()
+            AddNewHabitView(area: Areas())
         }
     }
 }

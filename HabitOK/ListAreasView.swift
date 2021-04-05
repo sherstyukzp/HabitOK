@@ -19,11 +19,15 @@ struct ListAreasView: View {
     var body: some View {
         List {
             ForEach(self.areas, id:\.self) { (area:Areas) in
-                NavigationLink(destination: AreaDetailView(area: area).environment(\.managedObjectContext, self.moc)) {
+                NavigationLink(destination:
+                                AreaDetailView(area: area).environment(\.managedObjectContext, self.moc))
+                {
                     AreaView(area: area).environment(\.managedObjectContext, self.moc)
                 }
             }
-        }
+            
+            .onDelete(perform: deleteArea(at:))
+        }.listStyle(GroupedListStyle())
         
         
         .navigationTitle(Text("Areas"))
@@ -39,6 +43,16 @@ struct ListAreasView: View {
         }
         
     }
+    
+    // MARK: - Метод удаления выбраной записи жарнала
+    func deleteArea(at offsets: IndexSet) {
+        for index in offsets {
+            let area = areas[index]
+            moc.delete(area)
+        }
+        try? moc.save()
+    }
+    
 }
 
 struct ListAreasView_Previews: PreviewProvider {

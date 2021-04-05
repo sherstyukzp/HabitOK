@@ -11,5 +11,13 @@ import CoreData
 
 @objc(Areas)
 public class Areas: NSManagedObject {
+    public var wrappedName: String {
+        nameArea ?? "Unknown name"
+    }
+    
+    public var habitArray: [Habits] {
+        let set = habits as? Set<Habits> ?? []
+        return set.sorted()
+    }
 
 }

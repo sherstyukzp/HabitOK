@@ -13,6 +13,7 @@
 		051CF0B4261B6A920019292E /* Habits+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CF0B0261B6A920019292E /* Habits+CoreDataProperties.swift */; };
 		051CF0B9261B6D290019292E /* AreaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CF0B8261B6D290019292E /* AreaDetailView.swift */; };
 		051CF0BE261B6D8D0019292E /* AreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CF0BD261B6D8D0019292E /* AreaView.swift */; };
+		051CF0D1261B86200019292E /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CF0D0261B86200019292E /* HabitView.swift */; };
 		0531DA182613B44400D19D55 /* AddNewHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DA172613B44400D19D55 /* AddNewHabitView.swift */; };
 		0531DA1D2613B94A00D19D55 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DA1C2613B94A00D19D55 /* ClearButton.swift */; };
 		0541050B26122708004D084F /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0541050A26122708004D084F /* HabitsView.swift */; };
@@ -61,6 +62,7 @@
 		051CF0B0261B6A920019292E /* Habits+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habits+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		051CF0B8261B6D290019292E /* AreaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDetailView.swift; sourceTree = "<group>"; };
 		051CF0BD261B6D8D0019292E /* AreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaView.swift; sourceTree = "<group>"; };
+		051CF0D0261B86200019292E /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
 		0531DA172613B44400D19D55 /* AddNewHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewHabitView.swift; sourceTree = "<group>"; };
 		0531DA1C2613B94A00D19D55 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		0541050A26122708004D084F /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
@@ -120,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				0541052226122F8F004D084F /* NoHabitsView.swift */,
-				0531DA172613B44400D19D55 /* AddNewHabitView.swift */,
 				0541050A26122708004D084F /* HabitsView.swift */,
 				0541050F2612277F004D084F /* StatisticsView.swift */,
 				05410514261227BB004D084F /* SettingsView.swift */,
@@ -129,6 +130,8 @@
 				051CF0BD261B6D8D0019292E /* AreaView.swift */,
 				051CF0B8261B6D290019292E /* AreaDetailView.swift */,
 				058B17D62617805E002E2D97 /* AddNewAreaView.swift */,
+				051CF0D0261B86200019292E /* HabitView.swift */,
+				0531DA172613B44400D19D55 /* AddNewHabitView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				0541053526123806004D084F /* DateModel.swift in Sources */,
 				0544F6402609190400903DF8 /* ContentView.swift in Sources */,
 				051CF0BE261B6D8D0019292E /* AreaView.swift in Sources */,
+				051CF0D1261B86200019292E /* HabitView.swift in Sources */,
 				0541052326122F8F004D084F /* NoHabitsView.swift in Sources */,
 				058B17D226177F6A002E2D97 /* ListAreasView.swift in Sources */,
 			);

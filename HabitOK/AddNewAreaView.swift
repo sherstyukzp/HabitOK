@@ -14,6 +14,11 @@ struct AddNewAreaView: View {
     
     @State var nameArea: String = ""
     
+    // MARK: - Проверка введённых данных, если данные введены то кнопка сохранить доступна
+    var disableForm: Bool {
+        nameArea == ""
+    }
+    
     var body: some View {
         NavigationView {
             Form {
@@ -49,6 +54,7 @@ struct AddNewAreaView: View {
                                             
                                         }) { Text("Save")
                                         }
+                                        .disabled(disableForm)
                                     }
             )
         }
