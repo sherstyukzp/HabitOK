@@ -34,7 +34,7 @@ struct AreaDetailView: View {
         )
         
         .sheet(isPresented: $showingAddHabit) {
-            AddNewHabitView(area: area).environmentObject(Areas())
+            AddNewHabitView(area: area)
         }
         
     }
@@ -49,8 +49,8 @@ struct AreaDetailView: View {
     }
 }
 
-//struct AreaDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AreaDetailView()
-//    }
-//}
+struct AreaDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        AreaDetailView(area: Areas())
+    }
+}

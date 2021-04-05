@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct ListHabitsView: View {
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Habits.entity(), sortDescriptors: [])
+    var habits: FetchedResults<Habits>
     
     @State private var showingAddHabit = false
     
     var body: some View {
-        VStack {
-            Text("Habits management")
-        }
+        List {
+            ForEach(self.habits, id:\.self) { (habit: Habits) in
+                Text("\(habit.wrappedName)")
+                
+            }
+            
+            .onDelete(perform: deleteHabit(at:))
+        }.listStyle(GroupedListStyle())
         
         
         .navigationTitle(Text("Habits"))
@@ -28,6 +36,15 @@ struct ListHabitsView: View {
         .sheet(isPresented: $showingAddHabit) {
             AddNewHabitView(area: Areas())
         }
+    }
+    
+    // MARK: - Метод удаления выбраной записи жарнала
+    func deleteHabit(at offsets: IndexSet) {
+        for index in offsets {
+            let habit = habits[index]
+            moc.delete(habit)
+        }
+        try? moc.save()
     }
 }
 
