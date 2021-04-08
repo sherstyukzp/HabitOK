@@ -97,6 +97,7 @@ struct HabitsView: View {
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
                     Button {
+                        print("👉 button pressed Filters...")
                         //self.showingDeleteAlert = true
                     } label: {
                         Text ("Filters")
@@ -108,6 +109,7 @@ struct HabitsView: View {
                 
                 ToolbarItem(placement: .bottomBar) {
                     Button {
+                        print("👉 button pressed Show completed...")
                         //self.showingDeleteAlert = true
                     } label: {
                         Text ("Show completed")

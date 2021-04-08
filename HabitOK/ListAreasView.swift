@@ -22,7 +22,14 @@ struct ListAreasView: View {
                 NavigationLink(destination:
                                 AreaDetailView(area: area).environment(\.managedObjectContext, self.moc))
                 {
-                    AreaView(area: area).environment(\.managedObjectContext, self.moc)
+                    VStack (alignment: .leading){
+                        Text("Area: \(area.wrappedName)")
+                            .font(.largeTitle)
+                        Text("Total habits: \(area.habitArray.count)")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                    }
+                    
                 }
             }
             

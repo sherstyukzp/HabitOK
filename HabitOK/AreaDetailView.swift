@@ -19,7 +19,9 @@ struct AreaDetailView: View {
         
         List {
             ForEach(self.area.habitArray, id: \.self) { habit in
-                HabitView(habits: habit).environment(\.managedObjectContext, self.moc)
+                VStack {
+                    Text ("Habit: \(habit.wrappedName)")
+                }
             }
             .onDelete(perform: deleteHabit(at:))
         }.listStyle(GroupedListStyle())
@@ -39,7 +41,7 @@ struct AreaDetailView: View {
         
     }
     
-    // MARK: - Метод удаления выбраной записи жарнала
+    // MARK: - Метод удаления привычки
     func deleteHabit(at offsets: IndexSet) {
         for index in offsets {
             let habit = area.habitArray[index]
