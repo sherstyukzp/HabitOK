@@ -4,7 +4,7 @@
         <attribute name="iconArea" optional="YES" attributeType="String"/>
         <attribute name="idArea" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="nameArea" optional="YES" attributeType="String"/>
-        <relationship name="habits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Habits" inverseName="areas" inverseEntity="Habits"/>
+        <relationship name="habits" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Habits" inverseName="areas" inverseEntity="Habits"/>
     </entity>
     <entity name="Habits" representedClassName="Habits" syncable="YES">
         <attribute name="dateStartHabit" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -17,7 +17,7 @@
         <relationship name="areas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Areas" inverseName="habits" inverseEntity="Areas"/>
     </entity>
     <elements>
-        <element name="Areas" positionX="-63" positionY="-18" width="128" height="89"/>
-        <element name="Habits" positionX="-54" positionY="-9" width="128" height="149"/>
+        <element name="Areas" positionX="46.47265625" positionY="14.61328125" width="128" height="103"/>
+        <element name="Habits" positionX="337.984375" positionY="-45.328125" width="128" height="163"/>
     </elements>
 </model>

@@ -9,10 +9,14 @@ import SwiftUI
 
 struct TabBarContentView: View {
     
-    @State private var habitsCount = 1
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Habits.entity(), sortDescriptors: [])
+    private var habits: FetchedResults<Habits>
+    
     var body: some View {
         TabView {
-            if habitsCount == 0 {
+            // Проверка, есть привычки или нет
+            if habits.count == 0 {
                 NoHabitsView()
                     .tabItem {
                         Image(systemName: "chart.bar.doc.horizontal.fill")
@@ -24,6 +28,7 @@ struct TabBarContentView: View {
                         Image(systemName: "chart.bar.doc.horizontal.fill")
                         Text("Habits")
                     }
+                
             }
             StatisticsView()
                 .tabItem {

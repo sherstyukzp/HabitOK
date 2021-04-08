@@ -9,9 +9,14 @@ import SwiftUI
 
 struct HabitsView: View {
     
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: Habits.entity(), sortDescriptors: [])
+    private var habits: FetchedResults<Habits>
+    
     @State private var selectedDate: Date = Date()
     @State private var showDatePicker: Bool = false
     @State private var showingAddHabit = false
+    
     
     var body: some View {
         
@@ -79,13 +84,13 @@ struct HabitsView: View {
                     }
                 }
                 
-                
-                
-                List(0..<15) { item in
-                    Text("Hello World !")
-                }
-                
-                
+                List {
+                    ForEach(self.habits, id:\.self) { (habit: Habits) in
+                        Text("\(habit.wrappedName)")
+                        
+                    }
+                    
+                }.listStyle(GroupedListStyle())
                 
             }
             
@@ -113,17 +118,7 @@ struct HabitsView: View {
             .navigationBarHidden(true)
         }
         
-        
-        
-        
-        
-        
-        
     }
-    
-    
-    
-    
     
 }
 
