@@ -13,6 +13,7 @@ struct AddNewAreaView: View {
     @FetchRequest(entity: Areas.entity(), sortDescriptors: []) var areas: FetchedResults<Areas>
     
     @State var nameArea: String = ""
+    @State var selectionColor: String = "swatch_shipcove"
     
     // MARK: - Проверка введённых данных, если данные введены то кнопка сохранить доступна
     var disableForm: Bool {
@@ -26,6 +27,11 @@ struct AddNewAreaView: View {
                     TextField("Typing name area", text: $nameArea)
                         .keyboardType(.default)
                         .modifier(ClearButton(text: $nameArea))
+                }
+                
+                Section(header: Text("Color")) {
+                    ColorSwatchView(selection: $selectionColor)
+                    Text("\(selectionColor)")
                 }
             }
             
@@ -46,6 +52,7 @@ struct AddNewAreaView: View {
                                             //---
                                             let newArea = Areas(context: self.moc)
                                             newArea.nameArea = self.nameArea
+                                            newArea.colorArea = self.selectionColor
                                             self.nameArea = ""
                                             try? self.moc.save()
                                             

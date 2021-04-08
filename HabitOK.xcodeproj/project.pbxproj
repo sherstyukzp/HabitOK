@@ -34,6 +34,7 @@
 		058B17D226177F6A002E2D97 /* ListAreasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17D126177F6A002E2D97 /* ListAreasView.swift */; };
 		058B17D72617805E002E2D97 /* AddNewAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17D62617805E002E2D97 /* AddNewAreaView.swift */; };
 		058B17DC261781EF002E2D97 /* ListHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17DB261781EF002E2D97 /* ListHabitsView.swift */; };
+		05D535ED261F990B00A34B14 /* ColorSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D535EC261F990B00A34B14 /* ColorSwatchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		058B17D126177F6A002E2D97 /* ListAreasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAreasView.swift; sourceTree = "<group>"; };
 		058B17D62617805E002E2D97 /* AddNewAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAreaView.swift; sourceTree = "<group>"; };
 		058B17DB261781EF002E2D97 /* ListHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHabitsView.swift; sourceTree = "<group>"; };
+		05D535EC261F990B00A34B14 /* ColorSwatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSwatchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		054105452612382F004D084F /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				05D535EC261F990B00A34B14 /* ColorSwatchView.swift */,
 				0541054926125105004D084F /* ItemFormatter.swift */,
 				0531DA1C2613B94A00D19D55 /* ClearButton.swift */,
 				054BD3C0261A14E0002FD0BD /* EmailHelper.swift */,
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				051CF0B3261B6A920019292E /* Habits+CoreDataClass.swift in Sources */,
+				05D535ED261F990B00A34B14 /* ColorSwatchView.swift in Sources */,
 				054BD3C1261A14E0002FD0BD /* EmailHelper.swift in Sources */,
 				05410515261227BB004D084F /* SettingsView.swift in Sources */,
 				058B17DC261781EF002E2D97 /* ListHabitsView.swift in Sources */,

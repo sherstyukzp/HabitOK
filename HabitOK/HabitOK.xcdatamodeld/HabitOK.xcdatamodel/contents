@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Areas" representedClassName="Areas" syncable="YES">
+        <attribute name="colorArea" optional="YES" attributeType="String"/>
         <attribute name="iconArea" optional="YES" attributeType="String"/>
         <attribute name="idArea" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="nameArea" optional="YES" attributeType="String"/>
@@ -17,7 +18,7 @@
         <relationship name="areas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Areas" inverseName="habits" inverseEntity="Areas"/>
     </entity>
     <elements>
-        <element name="Areas" positionX="46.47265625" positionY="14.61328125" width="128" height="103"/>
+        <element name="Areas" positionX="46.47265625" positionY="14.61328125" width="128" height="118"/>
         <element name="Habits" positionX="337.984375" positionY="-45.328125" width="128" height="163"/>
     </elements>
 </model>

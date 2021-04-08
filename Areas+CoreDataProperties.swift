@@ -19,6 +19,7 @@ extension Areas {
     @NSManaged public var iconArea: String?
     @NSManaged public var idArea: UUID?
     @NSManaged public var nameArea: String?
+    @NSManaged public var colorArea: String?
     @NSManaged public var habits: NSSet?
 
 }

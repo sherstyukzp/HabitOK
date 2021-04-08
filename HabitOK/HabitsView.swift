@@ -86,7 +86,16 @@ struct HabitsView: View {
                 
                 List {
                     ForEach(self.habits, id:\.self) { (habit: Habits) in
-                        Text("\(habit.wrappedName)")
+                        VStack(alignment: .leading) {
+                            Text("Habit: \(habit.wrappedName)")
+                                .font(.largeTitle)
+                            Text("Area: \(habit.areas?.wrappedName ?? "No area")")
+                                .font(.footnote)
+                                .foregroundColor(.secondary)
+                                .background(Color(habit.areas?.colorArea ?? "swatch_shipcove"))
+                                
+                        }
+                        
                         
                     }
                     
