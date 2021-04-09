@@ -24,67 +24,19 @@ struct HabitsView: View {
         NavigationView {
             
             VStack {
-                // NavigationBar
-                VStack (spacing: 5) {
-                    HStack {
-                        HStack {
-                            Button(action: {
-                                print("👉 button pressed Calendar...")
-                                self.showDatePicker.toggle()
-                                
-                            }) { Image(systemName: "calendar")
-                                .resizable()
-                                .frame(width: 20, height: 20)
-                            }
-                            
-                            Text("\(selectedDate, formatter: ItemFormatter.init().itemFormatterDayOfTheWeekDayOfTheMonthAndMonth)")
-                                .font(.body)
-                                .foregroundColor(Color(.systemGray))
-                                .onTapGesture {
-                                    showDatePicker.toggle()
-                                }
-                            
-                        }.padding(.horizontal)
-                        Spacer()
-                        // Button Plus
-                        HStack {
-                            Button(action: {
-                                print("👉 button pressed Filters...")
-                                self.showingFilter.toggle()
-                            }) {
-                                Image(systemName: "line.horizontal.3.decrease.circle.fill")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                            }.sheet(isPresented: $showingFilter) {
-                                FilterView()
-                            }
-                            
-                        }.padding(.horizontal)
+                if showDatePicker {
+                    // DatePicker
+                    VStack {
+                        Divider()
+                        DatePicker("", selection: $selectedDate, displayedComponents: [.date])
+                            .datePickerStyle(GraphicalDatePickerStyle())
+                            .onChange(of: selectedDate, perform: { value in
+                                showDatePicker = false
+                            })
                         
-                    }
-                    HStack{
-                        Text("Habits")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.leading)
-                            .padding(.horizontal)
-                        Spacer()
-                    }
-                    Divider()
-                    
-                    if showDatePicker {
-                        // DatePicker
-                        VStack {
-                            DatePicker("", selection: $selectedDate, displayedComponents: [.date])
-                                .datePickerStyle(GraphicalDatePickerStyle())
-                                .onChange(of: selectedDate, perform: { value in
-                                    showDatePicker = false
-                                })
-                            
-                            Divider()
-                            
-                        }
-                    }
+                        Divider()
+                        
+                    }.background(Color(.secondarySystemBackground))
                 }
                 
                 List {
@@ -96,23 +48,50 @@ struct HabitsView: View {
                                 .font(.footnote)
                                 .foregroundColor(.secondary)
                                 .background(Color(habit.areas?.colorArea ?? "swatch_shipcove"))
-                                
                         }
-                        
-                        
                     }
                     
                 }.listStyle(GroupedListStyle())
                 
             }
             
-            
-            .navigationBarHidden(true)
+            .navigationTitle(Text("Habits"))
+            .navigationBarItems(leading:
+                                    HStack {
+                                        Button(action: {
+                                            print("👉 button pressed Calendar...")
+                                            self.showDatePicker.toggle()
+                                            
+                                        }) { Image(systemName: "calendar")
+                                            .resizable()
+                                            .frame(width: 20, height: 20)
+                                        }
+                                        
+                                        Text("\(selectedDate, formatter: ItemFormatter.init().itemFormatterDayOfTheWeekDayOfTheMonthAndMonth)")
+                                            .font(.body)
+                                            .foregroundColor(Color(.systemGray))
+                                        
+                                        Spacer()
+                                        
+                                    }
+                                , trailing:
+                                    Button(action: {
+                                        print("👉 button pressed Filter...")
+                                        self.showingFilter.toggle()
+                                        
+                                    }) { Image(systemName: "line.horizontal.3.decrease.circle.fill")
+                                        .resizable()
+                                        .frame(width: 35, height: 35)
+                                    })
+        }
+        .sheet(isPresented: $showingFilter) {
+            FilterView()
         }
         
     }
     
 }
+
 
 
 
