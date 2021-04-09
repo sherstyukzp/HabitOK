@@ -18,6 +18,7 @@ struct HabitsView: View {
     @State private var showDatePicker: Bool = false
     @State private var showingFilter = false
     
+    @State private var checked = false
     
     var body: some View {
         
@@ -41,17 +42,31 @@ struct HabitsView: View {
                 
                 List {
                     ForEach(self.habits, id:\.self) { (habit: Habits) in
-                        VStack(alignment: .leading) {
-                            Text("Habit: \(habit.wrappedName)")
-                                .font(.largeTitle)
-                            Text("Area: \(habit.areas?.wrappedName ?? "No area")")
-                                .font(.footnote)
-                                .foregroundColor(.secondary)
-                                .background(Color(habit.areas?.colorArea ?? "swatch_shipcove"))
+                        
+                        HStack {
+                            
+                            Checkbox(toggle: self.$checked, text: "")
+                            
+                            VStack(alignment: .leading) {
+                                Text("\(habit.wrappedName)")
+                                    .font(.largeTitle)
+                                Text("\(habit.areas?.wrappedName ?? "No area")")
+                                    .font(.footnote)
+                                    .foregroundColor(.secondary)
+                            }
+                            
+                            Spacer()
+                            RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                .fill(Color(habit.areas?.colorArea ?? "swatch_shipcove"))
+                                //.padding()
+                                .frame(width: 10, height: 10, alignment: .center)
+                            
+                            
                         }
+                        
                     }
                     
-                }.listStyle(GroupedListStyle())
+                }.listStyle(InsetGroupedListStyle())
                 
             }
             
@@ -93,7 +108,26 @@ struct HabitsView: View {
 }
 
 
-
+struct Checkbox: View {
+    @Binding var toggle: Bool
+    var text: String
+    var body: some View {
+        Button(action: {
+            self.toggle.toggle()
+        }) {
+            Image(systemName: self.toggle ? "checkmark.circle.fill" :  "circle")
+                
+                .resizable()
+                .frame(width: 30, height: 30)
+                .foregroundColor(.blue)
+            
+            Text(text).padding(0)
+        }
+        .buttonStyle(PlainButtonStyle())
+        .background(Color(red: 0, green: 0, blue: 0, opacity: 0.02))
+        .cornerRadius(0)
+    }
+}
 
 
 
