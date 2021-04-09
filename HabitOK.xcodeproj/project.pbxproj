@@ -35,6 +35,8 @@
 		058B17D72617805E002E2D97 /* AddNewAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17D62617805E002E2D97 /* AddNewAreaView.swift */; };
 		058B17DC261781EF002E2D97 /* ListHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B17DB261781EF002E2D97 /* ListHabitsView.swift */; };
 		05D535ED261F990B00A34B14 /* ColorSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D535EC261F990B00A34B14 /* ColorSwatchView.swift */; };
+		05D535F2261FA40400A34B14 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D535F1261FA40400A34B14 /* DismissingKeyboard.swift */; };
+		05D535F7262069D600A34B14 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D535F6262069D600A34B14 /* FilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		058B17D62617805E002E2D97 /* AddNewAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAreaView.swift; sourceTree = "<group>"; };
 		058B17DB261781EF002E2D97 /* ListHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHabitsView.swift; sourceTree = "<group>"; };
 		05D535EC261F990B00A34B14 /* ColorSwatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSwatchView.swift; sourceTree = "<group>"; };
+		05D535F1261FA40400A34B14 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
+		05D535F6262069D600A34B14 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 			children = (
 				0541052226122F8F004D084F /* NoHabitsView.swift */,
 				0541050A26122708004D084F /* HabitsView.swift */,
+				05D535F6262069D600A34B14 /* FilterView.swift */,
 				058B17D126177F6A002E2D97 /* ListAreasView.swift */,
 				058B17DB261781EF002E2D97 /* ListHabitsView.swift */,
 				051CF0B8261B6D290019292E /* AreaDetailView.swift */,
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				0541053426123806004D084F /* DateModel.swift */,
+				05D535F1261FA40400A34B14 /* DismissingKeyboard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,7 +362,9 @@
 				05410515261227BB004D084F /* SettingsView.swift in Sources */,
 				058B17DC261781EF002E2D97 /* ListHabitsView.swift in Sources */,
 				0544F63C2609190400903DF8 /* AppDelegate.swift in Sources */,
+				05D535F2261FA40400A34B14 /* DismissingKeyboard.swift in Sources */,
 				054105102612277F004D084F /* StatisticsView.swift in Sources */,
+				05D535F7262069D600A34B14 /* FilterView.swift in Sources */,
 				0541054A26125105004D084F /* ItemFormatter.swift in Sources */,
 				0544F63E2609190400903DF8 /* SceneDelegate.swift in Sources */,
 				051CF0B9261B6D290019292E /* AreaDetailView.swift in Sources */,

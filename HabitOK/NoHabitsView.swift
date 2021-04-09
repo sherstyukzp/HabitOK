@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct NoHabitsView: View {
+    
     @State private var selectedDate: Date = Date()
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -19,7 +21,7 @@ struct NoHabitsView: View {
                     .font(.title3)
                     .fontWeight(.bold)
                     .padding()
-                Text("You still have no habits. Let's create the first? To do this, click the Plus button.")
+                Text("You still have no habits. Let's create the first? To do this, go to Settings - Area manager and create a habit.")
                     .font(.subheadline)
                     .foregroundColor(Color.gray)
                     .multilineTextAlignment(.center)
@@ -46,6 +48,7 @@ struct NoHabitsView: View {
                                         HStack {
                                             Button(action: {
                                                 print("👉 button pressed Plus...")
+                                                
                                             }) { Image(systemName: "plus.circle.fill")
                                                 .resizable()
                                                 .frame(width: 40, height: 40)

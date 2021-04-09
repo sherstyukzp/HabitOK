@@ -22,19 +22,32 @@ struct AddNewAreaView: View {
     
     var body: some View {
         NavigationView {
-            Form {
-                Section(header: Text("Name Area")) {
-                    TextField("Typing name area", text: $nameArea)
-                        .keyboardType(.default)
-                        .modifier(ClearButton(text: $nameArea))
+            
+            VStack {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(Color(selectionColor))
+                        .padding()
+                        .frame(width: 300, height: 100, alignment: .center)
+                    Text("\(nameArea)")
+                }
+                Divider()
+                
+                Form {
+                    Section(header: Text("Name Area")) {
+                        TextField("Typing name area", text: $nameArea)
+                            .keyboardType(.default)
+                            .modifier(ClearButton(text: $nameArea))
+                    }
+                    
+                    Section(header: Text("Color")) {
+                        ColorSwatchView(selection: $selectionColor)
+                    }
                 }
                 
-                Section(header: Text("Color")) {
-                    ColorSwatchView(selection: $selectionColor)
-                    Text("\(selectionColor)")
-                }
             }
             
+            .dismissingKeyboard()
             .navigationTitle(Text("New Area"))
             .navigationBarItems(leading:
                                     HStack {

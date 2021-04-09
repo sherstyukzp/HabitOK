@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HabitsView: View {
+    @Environment(\.presentationMode) var presentationMode
     
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Habits.entity(), sortDescriptors: [])
@@ -15,7 +16,7 @@ struct HabitsView: View {
     
     @State private var selectedDate: Date = Date()
     @State private var showDatePicker: Bool = false
-    @State private var showingAddHabit = false
+    @State private var showingFilter = false
     
     
     var body: some View {
@@ -45,15 +46,17 @@ struct HabitsView: View {
                             
                         }.padding(.horizontal)
                         Spacer()
+                        // Button Plus
                         HStack {
                             Button(action: {
-                                self.showingAddHabit.toggle()
+                                print("👉 button pressed Filters...")
+                                self.showingFilter.toggle()
                             }) {
-                                Image(systemName: "plus.circle.fill")
+                                Image(systemName: "line.horizontal.3.decrease.circle.fill")
                                     .resizable()
                                     .frame(width: 40, height: 40)
-                            }.sheet(isPresented: $showingAddHabit) {
-                                AddNewHabitView(area: Areas())
+                            }.sheet(isPresented: $showingFilter) {
+                                FilterView()
                             }
                             
                         }.padding(.horizontal)
@@ -103,28 +106,6 @@ struct HabitsView: View {
                 
             }
             
-            .toolbar {
-                ToolbarItem(placement: .bottomBar) {
-                    Button {
-                        print("👉 button pressed Filters...")
-                        //self.showingDeleteAlert = true
-                    } label: {
-                        Text ("Filters")
-                    }
-                }
-                ToolbarItem(placement: .bottomBar) {
-                    Spacer()
-                }
-                
-                ToolbarItem(placement: .bottomBar) {
-                    Button {
-                        print("👉 button pressed Show completed...")
-                        //self.showingDeleteAlert = true
-                    } label: {
-                        Text ("Show completed")
-                    }
-                }
-            }
             
             .navigationBarHidden(true)
         }
