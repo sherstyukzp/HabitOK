@@ -20,11 +20,11 @@ struct SettingsView: View {
                 Section(header: Text("Management")) {
                     
                     NavigationLink(destination: ListAreasView()) {
-                        Text("Areas management")
+                        Text("Areas manager")
                     }
                     
                     NavigationLink(destination: ListHabitsView()) {
-                        Text("Habits management")
+                        Text("Habits manager")
                     }
                 }
                 

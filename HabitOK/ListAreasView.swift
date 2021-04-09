@@ -17,32 +17,57 @@ struct ListAreasView: View {
     @State private var showingAddArea = false
     
     var body: some View {
-        List {
-            ForEach(self.areas, id:\.self) { (area:Areas) in
-                NavigationLink(destination:
-                                AreaDetailView(area: area).environment(\.managedObjectContext, self.moc))
-                {
-                    VStack(alignment: .leading) {
-                        Text("Area: \(area.wrappedName)")
-                            .font(.largeTitle)
-                        Text("Total habits: \(area.habitArray.count)")
-                            .font(.footnote)
-                            .foregroundColor(.secondary)
-                    }
+        VStack {
+            
+            if areas.count == 0 {
+                
+                VStack {
+                    Image(systemName: "tray.2.fill")
+                        .font(.system(size: 80))
+                        .foregroundColor(.gray)
+                    Text("No Areas!")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .padding()
+                    Text("You still don't have an area. Let's create the first one? To do this, click ''New Area'' and fill in the fields. The area can be your work, family, health, etc.")
+                        .font(.subheadline)
+                        .foregroundColor(Color.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 30.0)
                     
                 }
+                
+            } else {
+                
+                List {
+                    ForEach(self.areas, id:\.self) { (area: Areas) in
+                        NavigationLink(destination:
+                                        AreaDetailView(area: area).environment(\.managedObjectContext, self.moc))
+                        {
+                            VStack(alignment: .leading) {
+                                Text("Area: \(area.wrappedName)")
+                                    .font(.largeTitle)
+                                Text("Total habits: \(area.habitArray.count)")
+                                    .font(.footnote)
+                                    .foregroundColor(.secondary)
+                            }
+                            
+                        }
+                    }
+                    
+                    .onDelete(perform: deleteArea(at:))
+                }.listStyle(GroupedListStyle())
+                
             }
             
-            .onDelete(perform: deleteArea(at:))
-        }.listStyle(GroupedListStyle())
-        
+        }
         
         .navigationTitle(Text("Areas"))
         .navigationBarItems(trailing:
                                 Button(action: {
                                     self.showingAddArea.toggle()
                                 }) {
-                                    Text ("New")
+                                    Text ("New Area")
                                 }
         )
         .sheet(isPresented: $showingAddArea) {
@@ -51,7 +76,7 @@ struct ListAreasView: View {
         
     }
     
-    // MARK: - Метод удаления выбраной записи жарнала
+    // MARK: - Метод удаления выбраной Области
     func deleteArea(at offsets: IndexSet) {
         for index in offsets {
             let area = areas[index]

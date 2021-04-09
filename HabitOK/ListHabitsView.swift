@@ -12,30 +12,43 @@ struct ListHabitsView: View {
     @FetchRequest(entity: Habits.entity(), sortDescriptors: [])
     var habits: FetchedResults<Habits>
     
-    @State private var showingAddHabit = false
     
     var body: some View {
-        List {
-            ForEach(self.habits, id:\.self) { (habit: Habits) in
-                Text("\(habit.wrappedName)")
-                
-            }
-            
-            .onDelete(perform: deleteHabit(at:))
-        }.listStyle(GroupedListStyle())
         
+        VStack {
+            if habits.count == 0 {
+                VStack {
+                    Image(systemName: "tray.2.fill")
+                        .font(.system(size: 80))
+                        .foregroundColor(.gray)
+                    Text("No Habits!")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .padding()
+                    Text("You still have no habits. Let's create the first? To do this, go to Settings - Area manager and create a habit.")
+                        .font(.subheadline)
+                        .foregroundColor(Color.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 30.0)
+                    
+                }
+                
+            } else {
+                List {
+                    ForEach(self.habits, id:\.self) { (habit: Habits) in
+                        Text("\(habit.wrappedName)")
+                        
+                    }
+                    
+                    .onDelete(perform: deleteHabit(at:))
+                }.listStyle(GroupedListStyle())
+                }
+            
+        }
         
         .navigationTitle(Text("Habits"))
-        .navigationBarItems(trailing:
-                                Button(action: {
-                                    self.showingAddHabit.toggle()
-                                }) {
-                                    Text ("New")
-                                }
-        )
-        .sheet(isPresented: $showingAddHabit) {
-            AddNewHabitView(area: Areas())
-        }
+        
+        
     }
     
     // MARK: - Метод удаления выбраной записи жарнала

@@ -10,7 +10,8 @@ import SwiftUI
 struct AddNewAreaView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Areas.entity(), sortDescriptors: []) var areas: FetchedResults<Areas>
+    @FetchRequest(entity: Areas.entity(), sortDescriptors: [])
+    var areas: FetchedResults<Areas>
     
     @State var nameArea: String = ""
     @State var selectionColor: String = "swatch_shipcove"

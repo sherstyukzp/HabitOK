@@ -14,6 +14,7 @@ struct AddNewHabitView: View {
     @ObservedObject var area: Areas
     
     @State var newNameHabit: String = ""
+    @State var selectionColor: String = "swatch_shipcove"
     
     var body: some View {
         NavigationView {
