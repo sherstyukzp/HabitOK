@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AreaEntity" representedClassName="AreaEntity" syncable="YES">
+        <attribute name="colorArea" optional="YES" attributeType="String"/>
+        <attribute name="dateCreatedArea" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="iconArea" optional="YES" attributeType="String"/>
+        <attribute name="idArea" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="nameArea" optional="YES" attributeType="String"/>
+        <relationship name="areaToHabit" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HabitEntity" inverseName="habitToArea" inverseEntity="HabitEntity"/>
+    </entity>
+    <entity name="HabitEntity" representedClassName="HabitEntity" syncable="YES">
+        <attribute name="createdDateHabit" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="idHabit" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isArchivedHabit" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isCompletedHabit" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="nameHabit" optional="YES" attributeType="String"/>
+        <attribute name="recurrenceHabit" optional="YES" attributeType="String"/>
+        <attribute name="startDateHabit" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="timeOfDayHabit" optional="YES" attributeType="String"/>
+        <relationship name="habitToArea" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AreaEntity" inverseName="areaToHabit" inverseEntity="AreaEntity"/>
+        <relationship name="habitToLog" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LogsEntity" inverseName="logToHabit" inverseEntity="LogsEntity"/>
+        <relationship name="habitToNote" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="NotesEntity" inverseName="noteToHabit" inverseEntity="NotesEntity"/>
+    </entity>
+    <entity name="LogsEntity" representedClassName="LogsEntity" syncable="YES">
+        <attribute name="createdDateLog" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="idLog" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="targetDateLog" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="unitTypeLog" optional="YES" attributeType="String"/>
+        <attribute name="valueLog" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="logToHabit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HabitEntity" inverseName="habitToLog" inverseEntity="HabitEntity"/>
+    </entity>
+    <entity name="NotesEntity" representedClassName="NotesEntity" syncable="YES">
+        <attribute name="contentNote" optional="YES" attributeType="String"/>
+        <attribute name="createdDateNote" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="idNote" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="noteToHabit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HabitEntity" inverseName="habitToNote" inverseEntity="HabitEntity"/>
+    </entity>
+    <elements>
+        <element name="AreaEntity" positionX="-198.51171875" positionY="201.53515625" width="128" height="133"/>
+        <element name="HabitEntity" positionX="11.5703125" positionY="157.08984375" width="128" height="194"/>
+        <element name="LogsEntity" positionX="-59.80078125" positionY="448.66796875" width="128" height="119"/>
+        <element name="NotesEntity" positionX="86.41796875" positionY="449.90625" width="128" height="89"/>
+    </elements>
+</model>
